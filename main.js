@@ -1,7 +1,7 @@
 /**Codigo de header */
 window.addEventListener('scroll', (event) =>{
   const header = document.querySelector('header');
-  console.log(window.scrollY);
+  /*console.log(window.scrollY);*/
   header.classList.toggle('sticky',window.scrollY > 0)
 });
 
@@ -21,4 +21,8 @@ document.querySelectorAll('.link').forEach(link =>{
   })
 })
 
-
+const navToggle = document.querySelector('.nav-toggle')
+const navLinks = document.querySelector('.links')
+navToggle.addEventListener('click', () =>{
+  navLinks.classList.toggle('nav-menu-visible')
+})

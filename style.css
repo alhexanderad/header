@@ -16,6 +16,17 @@ header{
   height: 90px;
 }
 
+.nav-toggle{
+  color: black;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 12px;
+  line-height: 50px;
+  display: none;
+  cursor: pointer;
+}
+
 .sticky{
   background-color: #fff;
   padding: 15px 50px 15px 50px;
@@ -71,6 +82,7 @@ header{
   float: right;
   padding-right: 30px;
 }
+
 .link{
   cursor: pointer;
   text-decoration: none;
@@ -113,4 +125,31 @@ header{
 }
 .text{
   padding: 100px;
+}
+
+@media (max-width:768px){
+
+  .links{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 80px;
+    top:50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #1c2630;
+    left: 100%;
+    transition: left 0.8s;
+  }
+  .nav-toggle{
+    display: block;
+    position: fixed;
+    top: 4px;
+    right: 40px;
+  }
+  .nav-menu-visible{
+    left: 0;
+  }
 }
