@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;400;600;800;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
 *{
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat',sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -199,4 +199,232 @@ section{
 
 .services .box-container .box:hover img {
   filter:invert(100%)
+}
+
+/*Trabajos*/
+.works .box-container .box .image{
+  height: 30rem;
+  overflow: hidden;
+  position:relative;
+}
+
+.works .box-container .box .image img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.works .box-container {/*creando grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+}
+
+.works .box-container .box .image .content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  padding: 2rem;
+  z-index: 90;
+  transform: translateY(100%);
+}
+
+.works .box-container .box:hover .image .content{
+  transform: translateY(0);
+}
+
+/*contacto*/
+.contact .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact .box-container .box{
+  width: 30rem;
+}
+
+.contact .box-container .box h3{
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.contact .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  margin-bottom: 2rem;
+}
+
+.contact .box-container form {
+  flex: 1 1 42rem;
+}
+
+.contact .box-container form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .box-container form .inputBox input{
+  width: 49%;
+}
+
+.contact .box-container form .inputBox input,
+.contact .box-container form textarea {
+border: 0.1rem solid black;
+ border-radius: 0.9rem;
+ padding: 1.2rem 1.8rem;
+ font-size: 1.5rem;
+ color:red;
+ margin: 0.7rem 0;
+}
+
+.contact .box-container form textarea {
+  width:100%;
+  border-radius: 1rem;
+  resize: none;
+  height: 25rem;
+}
+
+.contact .box-container form .btn {
+  color: var(--black);
+  background: var(--white);
+  border: 0.1rem solid var(--black);
+  margin-top: 1rem;
+}
+
+.contact .box-container form .btn:hover {
+  color: var(--white);
+  background: var(--black);
+}
+
+/*footer*/
+.footer{
+  text-align: center;
+}
+
+.footer .logo{
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.footer .logo span{
+  font-weight: normal;
+}
+
+.footer p{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+  color: gray;
+}
+
+.footer .socials ion-icon{
+  font-size: 2.5rem;
+  color: var(--black);
+  background: var(--light-bg);
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.footer .socials ion-icon:nth-child(1){
+  color: var(--google-color);
+}
+
+.footer .socials ion-icon:nth-child(1):hover {
+  background: var(--google-color);
+  color: var(--white);
+}
+
+.footer .socials ion-icon:nth-child(2) {
+  color: var(--twitter-color);
+}
+
+.footer .socials ion-icon:nth-child(2):hover {
+  background: var(--twitter-color);
+  color: var(--white);
+}
+
+.footer .socials ion-icon:nth-child(3) {
+  color: var(--youtube-color);
+}
+
+.footer .socials ion-icon:nth-child(3):hover {
+  background: var(--youtube-color);
+  color: var(--white);
+}
+
+.footer .socials ion-icon:nth-child(4) {
+  color: var(--linkedin-color);
+}
+
+.footer .socials ion-icon:nth-child(4):hover {
+  background: var(--linkedin-color);
+  color: var(--white);
+}
+
+@media (max-width:1200px){
+  .header{
+    padding: 2rem;
+  }
+
+  .header.active{
+    padding: 2rem;
+  }
+
+  section{
+    padding:3rem 2rem;
+  }
+
+  .home h1{
+    font-size: 5rem;
+  }
+}
+
+@media (max-width:991px){
+  html{
+    font-size:60%;
+  }
+}
+
+@media (max-width:768px) {/*Dimenciion de responsive para que pueda aparecer icon hamburger*/
+  .header .menu{
+    display: block;
+  }
+
+  .header .navbar{
+    position: fixed;
+    top: 6.4rem;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    display: flex;
+    flex-flow:  column;
+    text-align:  center;
+    transform: translateX(100%);/*para que la lista de menu desaparesca*/
+    }
+
+    header .navbar.show{
+      transform: translateX(0);
+    }
+
+    .header .navbar a{
+      color: var(--black);
+      margin: 0;
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+}
+
+@media (max-width:450px) {
+  html {
+    font-size: 55%;
+  }
 }

@@ -11,13 +11,13 @@
 <body>
   <header class="header">
     <a href="#" class="logo">agency <span>8mac</span></a>
-    <a href="#" class="menu fas fa-bars"></a>
+    <a class="menu fas fa-bars"></a>
     <nav class="navbar">
       <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Service</a>
-      <a href="#">Works</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#services">Service</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -83,10 +83,105 @@
       </div>
     </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.1/esm/ionicons.min.js"
-    integrity="sha512-EmbXlzmS4lTfNxBz7xWacOcWYBw42KAzHTbtuVQvCPrR+fTeHHMB2dnxKqxhwqSqrK8foPW/LZOnHof4DCDHMw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js" referrerpolicy="no-referrer"></script>
+
+  <section class="works" id="works">
+    <h1 class="heading">Nuestros Trabajos</h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-1.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 01</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-2.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 02</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-3.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 03</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-4.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 04</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-5.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 05</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="./images/portfolio-6.jpg" alt="" srcset="">
+          <div class="content">
+            <h3>Project 06</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h1 class="heading">Contacto</h1>
+    <div class="box-container">
+      <div class="box">
+        <h3>Address</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h3>email</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h3>Phone</h3>
+        <p>+91 123154589</p>
+        <h3>fax</h3>
+        <p>(121) 321654987</p>
+        <h3>Address altenative</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <form action="">
+        <div class="inputBox">
+          <input type="text" name="" placeholder="your name" id="">
+          <input type="text" name="" placeholder="your number" id="">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="tu mensaje"></textarea>
+        <input type="submit" value="Enviar" class="btn">
+      </form>
+    </div>
+  </section>
+
+  <section class="footer">
+    <a href="#" class="logo">8mac</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+      Velit voluptatibus dolore officia quibusdam vero libero <br>
+      tempore debitis, iusto quo ratione ex cum harum pariatur veritatis.
+    </p>
+    <div class="socials">
+      <ion-icon name="logo-google"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+      <ion-icon name="logo-youtube"></ion-icon>
+      <ion-icon name="logo-linkedin"></ion-icon>
+
+    </div>
+  </section>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
