@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;400;600;800;700;900&display=swap');
+
+*{
+  font-family:'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+:root{
+  --black:#16161d;
+  --white:#fff;
+  --light-color:#808080;
+  --light-bg:#f5f5f8;
+  --google-color:#4285f4;
+  --twitter-color:#1da1f2;
+  --youtube-color:#ff0000;
+  --linkedin-color:#0e76a8;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+section{
+  padding:5rem 9%;
+}
+
+/*Home*/
+.home{
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/hero.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+
+}
+
+.btn{
+  color: var(--white);
+  font-size:1.7rem;
+  font-weight: 400;
+  border: 0.1rem solid var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem 3rem;
+}
+
+.btn:hover{
+  background:var(--black);
+}
+
+.heading{
+  font-size: 3.5em;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.home h1{
+  font-size: 6rem;
+  color:var(--white);
+  font-weight:400;
+  margin-bottom: 3rem;
+}
+
+.home p{
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color:var(--white);
+}
+
+/*Header*/
+.header{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 5rem 9%;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+/*Para poder activar header*/
+.header.active .logo,
+.header.active .navbar a,
+.header.active .menu{
+  color: var(--black);
+}
+.header.active{
+  background:var(--white);
+  padding: 3rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.header .logo{
+  margin-right: auto;/*este codifo hacer que se separe el logo de menu*/
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.header .logo span{
+  font-weight: normal;
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  color: var(--white);
+  margin-left: 3rem;
+}
+
+.header .menu{
+  font-size: 2rem;
+  color: var(--white);
+  display: none; 
+}
+
+/*About*/
+.about .box-container .box .image{
+  height: 40rem;
+}
+
+.about .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(25rem,1fr));
+  gap: 2rem;
+}
+
+.about .box-container .box p {
+  font-size: 1.7rem;
+  line-height:1.5;
+  margin-bottom: 1.5rem;
+  color: var(--light-color);
+  text-transform: none;
+}
+
+/*Sercives*/
+.services{
+  background: var(--light-bg);
+}
+
+.services .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(30rem,1fr));
+  gap: 5rem;
+}
+
+.services .box-container .box{
+  background: var(--white);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.services .box-container .box img {
+  margin-bottom: 2rem;
+}
+
+.services .box-container .box h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.services .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+.services .box-container .box:hover {
+  background: var(--black);
+}
+
+.services .box-container .box:hover h3,
+.services .box-container .box:hover p {
+ color: var(--white);
+}
+
+
+.services .box-container .box:hover img {
+  filter:invert(100%)
+}
